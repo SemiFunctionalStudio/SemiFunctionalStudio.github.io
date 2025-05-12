@@ -49,6 +49,11 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    #confirmation {
+      color: #aaffaa;
+      margin-top: 15px;
+      font-weight: bold;
+    }
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -77,15 +82,40 @@
   <div class="section email-signup">
     <h2>Stay Updated</h2>
     <p>Enter your email to get notified about future releases and sales:</p>
-    <form>
-      <input type="email" placeholder="Your email" required>
+    <form id="emailForm">
+      <input type="email" id="emailInput" placeholder="Your email" required>
       <button type="submit">Notify Me</button>
     </form>
+    <div id="confirmation"></div>
   </div>
 
   <!-- Contact Info -->
   <footer>
     Contact us: semifunctionalstudio@gmail.com
   </footer>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById('emailForm');
+    const emailInput = document.getElementById('emailInput');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+
+      if (email) {
+        // Simulate saving to file by offering a download
+        const blob = new Blob([email + '\n'], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'subscribers.txt';
+        a.click();
+
+        confirmation.textContent = "Email saved successfully!";
+        emailInput.value = '';
+      }
+    });
+  </script>
 </body>
 </html>
