@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi Functional Studio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2E3F53;
+            color: #F3E87A;
+        }
+        header {
+            background-image: url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+        .logo {
+            display: block;
+            margin: 2rem auto;
+            max-width: 120px;
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .subscribe-form {
+            margin-top: 2rem;
+        }
+        input[type="email"] {
+            padding: 0.5rem;
+            width: 70%;
+            max-width: 300px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #F3E87A;
+            border: none;
+            border-radius: 5px;
+            color: #2E3F53;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semi Functional Studio</h1>
+    </header>
+
+    <img src="logo.png" alt="Studio Logo" class="logo">
+
+    <section>
+        <h2>About</h2>
+        <p>We develop indie games and game-ready assets for Unity developers. From low-poly 3D models to interaction systems and UI, Semi Functional Studio is your partner in creation.</p>
+
+        <div class="subscribe-form">
+            <h3>Stay in the Loop</h3>
+            <p>Enter your email to get notified about new releases and asset sales:</p>
+            <form>
+                <input type="email" placeholder="you@example.com" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        Contact us at <a href="mailto:semifunctionalstudio@gmail.com" style="color: #F3E87A;">semifunctionalstudio@gmail.com</a>
+    </footer>
+</body>
+</html>
