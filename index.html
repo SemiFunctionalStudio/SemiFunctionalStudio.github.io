@@ -105,6 +105,10 @@
       const email = emailInput.value.trim();
 
       if (email) {
+        // Simulate saving to file by offering a download
+        const blob = new Blob([email + '\n'], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
         a.click();
 
         confirmation.textContent = "Email saved successfully!";
